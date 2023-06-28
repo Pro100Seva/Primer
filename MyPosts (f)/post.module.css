@@ -1,0 +1,158 @@
+.layout {
+  margin-left: 25vw;
+  margin-top: 30px;
+  min-width: 30vw;
+  max-width: 40vw;
+  min-height: 10vh;
+  /* max-height: 70vh; */
+
+  display: grid;
+  grid:
+    'header header header' auto
+    'leftSide body rightSide' 1fr
+    'footer footer footer' auto
+    / auto 1fr auto;
+  gap: 8px;
+
+  justify-content: start;
+  font-family: 'Carlito', sans-serif;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #edeef0;
+  border-radius: 25px;
+  padding: 20px;
+  color: black;
+}
+.list {
+  /* margin-top: 150px; */
+  margin-bottom: 50px;
+}
+.list:first-child {
+  /* margin-top: -150px; */
+}
+.header {
+  grid-area: header;
+  padding-bottom: 10px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  align-items: center;
+}
+.header1 {
+  width: 500px;
+  margin-left: 300px;
+}
+.user_pics {
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+}
+
+.emotion {
+  align-self: end;
+  position: relative;
+  right: 5%;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  margin: 20px 0px 0px 0px;
+}
+
+.emotion_power {
+  display: flex;
+}
+
+.flash {
+  width: 20px;
+  border: none;
+}
+
+.header_text {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  color: #808080;
+  align-self: end;
+}
+
+.user_name,
+.emotion_power,
+.like_count,
+.comments,
+.date {
+  font-size: 20px;
+}
+
+.user_name {
+  text-transform: lowercase;
+}
+
+.del_div {
+  grid-area: header;
+  justify-self: end;
+}
+
+.del_btn {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  position: relative;
+  bottom: 30%;
+}
+
+.body {
+  grid-area: body;
+  color: black;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+.comments {
+  position: relative;
+  left: 5%;
+  text-decoration: none;
+  color: #808080;
+}
+
+.comments:active {
+  color: black;
+}
+
+.comments:hover {
+  transition: 0.5s;
+  color: black;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  /* border-top: 1px solid gray; */
+}
+
+.like_count {
+  position: relative;
+  left: 2%;
+  color: #808080;
+}
+
+.left_side {
+  grid-area: leftSide;
+}
+
+.right_side {
+  grid-area: rightSide;
+}
